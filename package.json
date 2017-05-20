@@ -1,0 +1,54 @@
+{
+  "name": "ch-log",
+  "version": "1.0.0",
+  "description": "Generate changelog from GitHub releases.",
+  "bin": {
+    "changelog": "./dist/changelog.js",
+    "ch-log": "./dist/changelog.js"
+  },
+  "preferGlobal": true,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "tsc -p .",
+    "watch": "tsc -p . -w",
+    "lint": "tslint -p ./tsconfig.json --type-check",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/changelog.git"
+  },
+  "keywords": [
+    "changelog",
+    "github",
+    "release",
+    "releases"
+  ],
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/gluons/changelog/issues"
+  },
+  "homepage": "https://github.com/gluons/changelog",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "gh-got": "^5.0.0",
+    "git-remote-origin-url": "^2.0.0",
+    "ora": "^1.2.0",
+    "parse-github-repo-url": "^1.4.0",
+    "update-notifier": "^2.1.0",
+    "yargs": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/chalk": "^0.4.31",
+    "@types/git-remote-origin-url": "^2.0.0",
+    "@types/node": "6",
+    "@types/update-notifier": "^1.0.1",
+    "@types/yargs": "^6.6.0",
+    "tslint": "^5.2.0",
+    "typescript": "^2.3.2"
+  }
+}

@@ -1,0 +1,72 @@
+{
+	"rules": {
+		"arrow-parens": [
+			true,
+			"ban-single-arg-parens"
+		],
+		"arrow-return-shorthand": true,
+		"class-name": true,
+		"curly": true,
+		"indent": [
+			true,
+			"tabs"
+		],
+		"interface-name": [
+			false
+		],
+		"max-line-length": [
+			false
+		],
+		"no-console": [
+			false
+		],
+		"no-debugger": false,
+		"no-reference": false,
+		"no-unused-variable": [
+			true,
+			"check-parameters"
+		],
+		"no-var-keyword": true,
+		"no-var-requires": false,
+		"object-literal-shorthand": true,
+		"object-literal-sort-keys": false,
+		"prefer-const": false,
+		"prefer-template": [
+			true,
+			"allow-single-concat"
+		],
+		"quotemark": [
+			true,
+			"single",
+			"avoid-escape"
+		],
+		"semicolon": [
+			true,
+			"always"
+		],
+		"space-before-function-paren": [
+			true,
+			{
+				"anonymous": "always",
+				"named": "never",
+				"asyncArrow": "always"
+			}
+		],
+		"trailing-comma": [
+			true,
+			{
+				"multiline": "never",
+				"singleline": "never"
+			}
+		],
+		"variable-name": [
+			true,
+			"ban-keywords",
+			"check-format",
+			"allow-leading-underscore"
+		]
+	},
+	"extends": [
+		"tslint:recommended"
+	]
+}
