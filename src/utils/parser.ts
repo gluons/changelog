@@ -85,6 +85,8 @@ class Parser {
 		result += this._releases.map(release => release.toMDString()).join(EOL + EOL);
 		if (this._epilogue.length > 0) {
 			result += EOL + EOL;
+			result += '---'; // Horizontal line
+			result += EOL + EOL;
 			result += this._epilogue;
 		}
 		result += EOL;
