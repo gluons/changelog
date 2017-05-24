@@ -49,6 +49,7 @@
     "@types/update-notifier": "^1.0.1",
     "@types/yargs": "^6.6.0",
     "tslint": "^5.2.0",
+    "tslint-config-gluons": "^1.0.4",
     "typescript": "^2.3.2"
   }
 }
