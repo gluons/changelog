@@ -39,7 +39,6 @@
     "update-notifier": "^2.1.0"
   },
   "devDependencies": {
-    "@types/chalk": "^2.2.0",
     "@types/git-remote-origin-url": "^2.0.0",
     "@types/node": "^9.4.7",
     "@types/update-notifier": "^2.2.0",
