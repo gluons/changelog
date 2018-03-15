@@ -14,7 +14,7 @@
     "prepublishOnly": "npm run build",
     "build": "tsc -p .",
     "watch": "tsc -p . -w",
-    "lint": "tslint -p ./tsconfig.json --type-check",
+    "lint": "tslint -p ./tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

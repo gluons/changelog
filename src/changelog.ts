@@ -3,15 +3,15 @@
 // Node Built-in modules
 import { writeFile } from 'fs';
 import { EOL } from 'os';
-import { resolve } from 'path';
+import { resolve as rslv } from 'path';
 import { cwd } from 'process';
 
 // External modules
 import { cyan, green, magenta, red, yellow } from 'chalk';
-import gitRemoteOriginUrl = require('git-remote-origin-url');
 import ghGot = require('gh-got');
-import parseGitHubUrl = require('parse-github-repo-url');
+import gitRemoteOriginUrl = require('git-remote-origin-url');
 import ora = require('ora');
+import parseGitHubUrl = require('parse-github-repo-url');
 import updateNotifier = require('update-notifier');
 import yargs = require('yargs');
 
@@ -50,7 +50,7 @@ let spinner = ora({
 	spinner: 'dots3'
 });
 
-let changelogFilePath = resolve(cwd(), './CHANGELOG.md');
+let changelogFilePath = rslv(cwd(), './CHANGELOG.md');
 
 let slugPromise: Promise<string>;
 
