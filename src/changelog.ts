@@ -7,13 +7,14 @@ import { resolve as rslv } from 'path';
 import { cwd } from 'process';
 
 // External modules
-import { cyan, green, magenta, red, yellow } from 'chalk';
+import chalk from 'chalk';
 import ghGot = require('gh-got');
 import gitRemoteOriginUrl = require('git-remote-origin-url');
 import ora = require('ora');
 import parseGitHubUrl = require('parse-github-repo-url');
 import updateNotifier = require('update-notifier');
 import yargs = require('yargs');
+const { cyan, green, magenta, red, yellow } = chalk;
 
 // Local modules
 import GHRelease from './lib/gh-release';
