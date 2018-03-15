@@ -18,6 +18,7 @@ const { cyan, green, magenta, red, yellow } = chalk;
 
 // Local modules
 import GHRelease from './lib/gh-release';
+import getTokenEnv from './utils/getTokenEnv';
 import Parser from './utils/parser';
 
 // Package.json
@@ -33,11 +34,19 @@ const usage = [
 ];
 
 let argv = yargs
+			.config({
+				token: getTokenEnv()
+			})
 			.usage(usage.join(EOL + EOL))
 			.help()
 			.alias('help', 'h')
 			.version()
 			.alias('version', 'v')
+			.option('token', {
+				alias: 't',
+				describe: 'GitHub access token',
+				type: 'string'
+			})
 			.example(green('changelog'), `Generate changelog from repository in ${red('current working directory')}.`)
 			.example(`${green('changelog')} ${cyan('gluons/vue-github-buttons')}`, `Generate changelog from ${cyan('gluons/vue-github-buttons')} repository on GitHub.`)
 			.epilog(`ℹ️ More information: ${magenta('https://github.com/gluons/changelog')}`)
@@ -52,6 +61,9 @@ let spinner = ora({
 });
 
 let changelogFilePath = rslv(cwd(), './CHANGELOG.md');
+
+// Options
+let token: string = argv.token;
 
 let slugPromise: Promise<string>;
 
@@ -80,7 +92,13 @@ slugPromise
 	.then(slug => {
 		spinner.text = 'Getting GitHub releases...';
 
-		return ghGot(`repos/${slug}/releases`);
+		if (token) {
+			return ghGot(`repos/${slug}/releases`, {
+				token
+			});
+		} else {
+			return ghGot(`repos/${slug}/releases`);
+		}
 	})
 	.then(res => {
 		spinner.text = 'Parsing GitHub releases...';
