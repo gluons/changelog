@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.0
+- Add `--token` option to set your [GitHub access token](https://github.com/settings/tokens) for generating changlog.
+- Add using `CHANGELOG_GH_TOKEN` environment variable as [GitHub access token](https://github.com/settings/tokens).
+
 ## v1.0.2
 - Add horizontal line before changelog epilogue. (77bcb52e32713b1822f14cfa3a87d3462cc11249)
 
