@@ -34,6 +34,7 @@ Usage: changelog [<GitHub repo slug>]
 Options:
   --help, -h     Show help                                             [boolean]
   --version, -v  Show version number                                   [boolean]
+  --token, -t    GitHub access token                                    [string]
 
 Examples:
   changelog                            Generate changelog from repository in current working directory.
