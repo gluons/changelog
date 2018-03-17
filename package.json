@@ -1,6 +1,6 @@
 {
   "name": "ch-log",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Generate changelog from GitHub releases.",
   "bin": {
     "changelog": "./dist/changelog.js",
