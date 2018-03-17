@@ -2,6 +2,7 @@
 [![license](https://img.shields.io/github/license/gluons/changelog.svg?style=flat-square)](./LICENSE)
 [![npm](https://img.shields.io/npm/v/ch-log.svg?style=flat-square)](https://www.npmjs.com/package/ch-log)
 [![npm](https://img.shields.io/npm/dt/ch-log.svg?style=flat-square)](https://www.npmjs.com/package/ch-log)
+[![Travis](https://img.shields.io/travis/gluons/changelog.svg?style=flat-square)](https://travis-ci.org/gluons/changelog)
 [![TSLint](https://img.shields.io/badge/TSLint-gluons-15757B.svg?style=flat-square)](https://github.com/gluons/tslint-config-gluons)
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://github.com/carloscuesta/gitmoji)
 
