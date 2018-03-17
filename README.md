@@ -40,3 +40,5 @@ Examples:
   changelog                            Generate changelog from repository in current working directory.
   changelog gluons/vue-github-buttons  Generate changelog from gluons/vue-github-buttons repository on GitHub.
 ```
+
+You can also set your [GitHub access token](https://github.com/settings/tokens) by `CHANGELOG_GH_TOKEN` environment variable.
